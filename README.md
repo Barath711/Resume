@@ -1,2 +1,590 @@
-# Resume
-Created to find a J*B
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barath A C - SOC Analyst Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #0d2b4e;
+      --navy-mid:    #1a3f6f;
+      --navy-light:  #1e5096;
+      --accent:      #2e80ce;
+      --gold:        #c9a84c;
+      --gold-light:  #f0d080;
+      --white:       #ffffff;
+      --off-white:   #f7f9fc;
+      --text-dark:   #1a1a2e;
+      --text-mid:    #334155;
+      --text-light:  #64748b;
+      --divider:     #dce6f0;
+      --tag-bg:      #e8f1fb;
+      --tag-text:    #1a4b8c;
+    }
+
+    html { font-size: 9pt; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #dde4ee;
+      color: var(--text-dark);
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      margin: 20px auto;
+      background: var(--white);
+      box-shadow: 0 12px 48px rgba(13,43,78,0.20);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ════ HEADER ════ */
+    .header {
+      background: linear-gradient(135deg, #091f3a 0%, #0d2b4e 45%, #1a3f6f 78%, #1e5096 100%);
+      padding: 14px 36px 12px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+      pointer-events: none;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: 42%;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(46,128,206,0.08);
+      pointer-events: none;
+    }
+
+    .header-inner { position: relative; z-index: 1; }
+
+    .header-eyebrow {
+      font-family: 'Fira Code', monospace;
+      font-size: 6.4pt;
+      letter-spacing: 0.24em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      opacity: 0.82;
+    }
+
+    .header-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.3px;
+    }
+
+    .header-title {
+      font-size: 7.8pt;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.08em;
+      margin-top: 3px;
+    }
+
+    .contact-strip {
+      margin-top: 9px;
+      padding-top: 9px;
+      border-top: 1px solid rgba(255,255,255,0.11);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 7.2pt;
+      color: rgba(255,255,255,0.73);
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .contact-item svg { flex-shrink: 0; opacity: 0.65; }
+
+    /* ════ TWO-COLUMN BODY ════ */
+    .body-wrap {
+      display: grid;
+      grid-template-columns: 182px 1fr;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      background: var(--off-white);
+      border-right: 1px solid var(--divider);
+      padding: 14px 14px 14px;
+      overflow: hidden;
+    }
+
+    .sidebar-section { margin-bottom: 13px; }
+
+    .sidebar-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 7.6pt;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .skill-group { margin-bottom: 7px; }
+    .skill-group-label {
+      font-size: 6.6pt;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 4px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+    .skill-tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 6.4pt;
+      font-weight: 500;
+      padding: 1px 6px;
+      border-radius: 3px;
+      border: 1px solid #c2d8f2;
+    }
+
+    .edu-item { margin-bottom: 8px; }
+    .edu-degree { font-size: 7pt; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+    .edu-school { font-size: 6.8pt; color: var(--navy-light); font-weight: 500; margin-top: 1px; }
+    .edu-meta   { font-size: 6.4pt; color: var(--text-light); font-family: 'Fira Code', monospace; margin-top: 1px; }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+    .cert-icon {
+      width: 18px; height: 18px;
+      background: var(--navy);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .cert-icon svg { width: 10px; height: 10px; }
+    .cert-name   { font-size: 6.9pt; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+    .cert-issuer { font-size: 6.2pt; color: var(--text-light); font-family: 'Fira Code', monospace; }
+
+    .vol-title { font-size: 7pt; font-weight: 600; color: var(--text-dark); }
+    .vol-org   { font-size: 6.8pt; color: var(--navy-light); font-weight: 500; margin-top: 1px; }
+    .vol-desc  { font-size: 6.4pt; color: var(--text-mid); margin-top: 3px; line-height: 1.5; }
+
+    /* ─── MAIN ─── */
+    .main {
+      padding: 14px 26px 12px 18px;
+      overflow: hidden;
+    }
+
+    .section { margin-bottom: 11px; }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      margin-bottom: 7px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--accent), transparent);
+    }
+
+    .summary-text {
+      font-size: 7.6pt;
+      color: var(--text-mid);
+      line-height: 1.65;
+      border-left: 3px solid var(--accent);
+      padding: 5px 10px 5px 11px;
+      background: linear-gradient(to right, #f0f6ff, transparent);
+      border-radius: 0 3px 3px 0;
+      text-align: justify;
+    }
+
+    .exp-item { margin-bottom: 10px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .exp-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .exp-period {
+      font-family: 'Fira Code', monospace;
+      font-size: 6.6pt;
+      color: var(--white);
+      background: var(--navy-light);
+      padding: 1px 7px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-company  { font-size: 7.5pt; font-weight: 600; color: var(--accent); margin-bottom: 1px; }
+    .exp-location { font-size: 6.6pt; color: var(--text-light); font-family: 'Fira Code', monospace; margin-bottom: 5px; }
+
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      font-size: 7.4pt;
+      color: var(--text-mid);
+      line-height: 1.55;
+      padding: 1px 0 1px 13px;
+      position: relative;
+      text-align: justify;
+    }
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 7pt;
+      line-height: 1.7;
+    }
+
+    .hl { font-weight: 600; color: var(--navy-mid); }
+
+    /* ── projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .project-item {
+      padding-left: 10px;
+      border-left: 2px solid var(--divider);
+    }
+
+    .project-title {
+      font-size: 7.8pt;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 1px;
+    }
+
+    .project-meta {
+      font-family: 'Fira Code', monospace;
+      font-size: 6.4pt;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .project-bullets { list-style: none; }
+    .project-bullets li {
+      font-size: 7.2pt;
+      color: var(--text-mid);
+      line-height: 1.5;
+      padding: 1px 0 1px 11px;
+      position: relative;
+      text-align: justify;
+    }
+    .project-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+      font-size: 7pt;
+    }
+
+    @media print {
+      body { background: none; }
+      .page { margin: 0; box-shadow: none; width: 100%; height: 100%; }
+    }
+
+    @page { size: A4; margin: 0; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-eyebrow">Security Operations Center &nbsp;·&nbsp; Incident Response &nbsp;·&nbsp; Threat Detect &amp; Respond</div>
+      <div class="header-name">Barath A C</div>
+      <div class="header-title">SOC Analyst II &nbsp;&nbsp;|&nbsp;&nbsp; Deloitte USI &nbsp;&nbsp;|&nbsp;&nbsp; Hyderabad, India</div>
+      <div class="contact-strip">
+        <a href="mailto:barath0711@outlook.com" class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="1" y="1" width="18" height="14" rx="2"/><polyline points="1,1 10,9 19,1"/></svg>
+          barath0711@outlook.com
+        </a>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0122 16.9z"/></svg>
+          +91 63030 72416
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Chennai, India
+        </span>
+        <a href="https://linkedin.com/in/barath07" class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/barath07
+        </a>
+        <a href="https://github.com/Barath711" class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.84a9.6 9.6 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.02 10.02 0 0022 12C22 6.48 17.52 2 12 2z"/></svg>
+          github.com/Barath711
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ BODY ══ -->
+  <div class="body-wrap">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Core Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">SIEM &amp; Monitoring</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Splunk</span><span class="skill-tag">MS Sentinel</span>
+            <span class="skill-tag">Log Correlation</span><span class="skill-tag">Alert Triage</span>
+            <span class="skill-tag">Threat Hunting</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">EDR / XDR / EPP</div>
+          <div class="skill-tags">
+            <span class="skill-tag">CrowdStrike Falcon</span><span class="skill-tag">Cortex XDR</span>
+            <span class="skill-tag">Cortex XSOAR</span><span class="skill-tag">MS Defender</span>
+            <span class="skill-tag">Trend Micro</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Asset &amp; Visibility</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Axonius</span><span class="skill-tag">Tanium</span>
+            <span class="skill-tag">Nozomi Networks</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Threat Intelligence</div>
+          <div class="skill-tags">
+            <span class="skill-tag">OSINT</span><span class="skill-tag">CTI</span>
+            <span class="skill-tag">MITRE ATT&amp;CK</span><span class="skill-tag">IOC / IOA</span>
+            <span class="skill-tag">Threat Feeds</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Network Security</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Palo Alto</span><span class="skill-tag">Firewall Analysis</span>
+            <span class="skill-tag">IDS / IPS</span><span class="skill-tag">Packet Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Automation &amp; Scripting</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span><span class="skill-tag">PowerShell</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Identity &amp; Cloud</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure AD</span><span class="skill-tag">IAM</span>
+            <span class="skill-tag">MS Purview</span><span class="skill-tag">DLP</span>
+            <span class="skill-tag">MFA / SSO</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Malware &amp; Forensics</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Phishing Analysis</span><span class="skill-tag">Sandbox</span>
+            <span class="skill-tag">VirusTotal</span><span class="skill-tag">AbuseIPDB</span>
+            <span class="skill-tag">URLSCAN</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Ticketing &amp; Reporting</div>
+          <div class="skill-tags">
+            <span class="skill-tag">ServiceNow</span><span class="skill-tag">Jira</span>
+            <span class="skill-tag">RCA Reports</span><span class="skill-tag">Exec Summaries</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#c9a84c" stroke-width="1.8"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3L10 14l-4.8 2.5.9-5.3L2.3 7.6l5.3-.8z"/></svg>
+          </div>
+          <div>
+            <div class="cert-name">SC-200 Security Operations Analyst</div>
+            <div class="cert-issuer">Microsoft · Active 2025</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#c9a84c" stroke-width="1.8"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3L10 14l-4.8 2.5.9-5.3L2.3 7.6l5.3-.8z"/></svg>
+          </div>
+          <div>
+            <div class="cert-name">AI-102 Azure AI Engineer Associate</div>
+            <div class="cert-issuer">Microsoft · Active 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">Master of Computer Applications</div>
+          <div class="edu-school">SRM University, Chennai</div>
+          <div class="edu-meta">Jun 2023 – Jun 2025 <br> CGPA 9.45</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Bachelor of Computer Applications</div>
+          <div class="edu-school">Loyola College, Chennai</div>
+          <div class="edu-meta">Jun 2019 – Jun 2022 <br> CGPA 9.0</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Volunteering</div>
+        <div class="vol-title">Campaigns Volunteer</div>
+        <div class="vol-org">Make a Difference (MAD)</div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="section">
+        <div class="section-heading">Professional Summary</div>
+        <p class="summary-text">
+          SOC Analyst II at Deloitte USI with 3+ years advancing from L1 triage to independently leading shifts and owning high-severity client escalations across enterprise and OT environments. Deep hands-on experience with <strong>Splunk, Microsoft Sentinel (KQL), Microsoft Defender, Cortex XSOAR, CrowdStrike Falcon, Trend Micro, Nozomi (ICS/OT), Tanium, and Axonius </strong>. Consistently reduces MTTD/MTTR and false positives through correlation tuning and Python-driven tooling; improves analyst throughput and case quality with standardized runbooks and executive-ready reporting. Trusted for clear stakeholder communication, purple-team readiness exercises, and mentoring junior analysts to raise overall SOC performance.
+        </p>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">Work Experience</div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">SOC Analyst II</div>
+            <div class="exp-period">Jan 2024 – Present</div>
+          </div>
+          <div class="exp-company">Deloitte USI - Cyber &amp; Strategic Risk</div>
+          <div class="exp-location">📍 Hyderabad, India</div>
+          <ul class="exp-bullets">
+            <li>Stepped into an informal <span class="hl">shift lead capacity</span> - coordinating handovers, prioritising queue during peak periods, and serving as first escalation point for L1 analysts.</li>
+            <li>Own end-to-end incident response for <span class="hl">complex, high-severity cases</span>; accountable for containment, RCA, and client-facing communication throughout the incident lifecycle.</li>
+            <li>Operate <span class="hl">Microsoft Defender for Endpoint &amp; Identity</span> for endpoint telemetry, hunting suspicious auth patterns, and correlating identity-based threats with network activity.</li>
+            <li>Conduct threat hunting and IOC sweeps via <span class="hl">Tanium</span> - querying live asset state, validating patch posture, and isolating compromised hosts during active incidents.</li>
+            <li>Use <span class="hl">Axonius</span> for asset inventory reconciliation; identify unmanaged or misconfigured devices outside standard coverage and work with clients to close visibility gaps.</li>
+            <li>Utilise <span class="hl">Nozomi Networks</span> for OT/ICS monitoring; detect anomalous lateral movement and protocol deviations in air-gapped segments.</li>
+            <li>Perform malware and phishing analysis via <span class="hl">Trend Micro &amp; Cortex XSOAR</span> playbooks; block indicators and document findings with full kill-chain context.</li>
+            <li>Built <span class="hl">Python OSINT automation tool</span> (VirusTotal + AbuseIPDB + URLSCAN.io) adopted team-wide - cut IOC investigation time by <span class="hl">40%</span>, tripling analyst throughput per shift.</li>
+            <li>Actively mentors L1 analysts on triage, tooling, and escalation judgement - contributing to team capability growth and internal knowledge base.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">SOC Analyst I</div>
+            <div class="exp-period">Aug 2022 – Dec 2023</div>
+          </div>
+          <div class="exp-company">Deloitte USI - Cyber &amp; Strategic Risk</div>
+          <div class="exp-location">📍 Hyderabad, India</div>
+          <ul class="exp-bullets">
+            <li>First-line alert triage across SIEM platforms; escalated confirmed incidents with structured enrichment and initial containment recommendations within SLA windows.</li>
+            <li>Built hands-on proficiency with <span class="hl">Splunk, Cortex XSOAR, CrowdStrike, and Palo Alto</span> across multiple concurrent client environments.</li>
+            <li>Documented all activity in <span class="hl">ServiceNow and Jira</span>; assisted senior analysts in shift reporting, timeline reconstruction, and audit-aligned incident records.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-heading">Projects</div>
+        <div class="projects-grid">
+
+          <div class="project-item">
+            <div class="project-title">OSINT MultiSearch - IOC Automation Tool</div>
+            <div class="project-meta">Python · VirusTotal · AbuseIPDB · URLSCAN.io</div>
+            <ul class="project-bullets">
+              <li>Unified desktop tool querying three OSINT APIs simultaneously - eliminates tab-switching during active investigations.</li>
+              <li>Reduced IOC lookup time 40%; adopted as standard utility across the SOC shift.</li>
+              <li>Async calls + result caching handle high-volume bursts without rate limiting.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">Browser History Parser - Forensics Tool</div>
+            <div class="project-meta">Python · SQLite · XLSX/CSV Export · Forensics</div>
+            <ul class="project-bullets">
+              <li>Parses Chromium History &amp; Downloads DBs into a clean Excel export with timestamps, URLs, referrers, and file artifacts.</li>
+              <li>Reconstructs click trails for investigations - surfaces malvertising chains and suspicious download activity.</li>
+              <li>Supports Chrome, Edge, and Brave; safe-copy workflow handles locked databases.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</div>
+</body>
+</html>
